@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - prints each letter from a to z, lower and uppercase
+ * main - prints each letter from a to z, except q and e
  *
  * Return: 0, always succesful
  */
@@ -14,12 +14,13 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
-	}
-
-	for (ch = 'A'; ch <= 'Z'; ch++)
-	{
-		putchar(ch);
+		if (ch == 'e' || ch == 'q')
+		{
+		}
+		else
+		{
+			putchar(ch);
+		}
 	}
 
 	putchar('\n');
