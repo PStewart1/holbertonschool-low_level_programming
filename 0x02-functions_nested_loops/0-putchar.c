@@ -1,21 +1,24 @@
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+#include <stdio.h> */
+#include "main.h"
 
-/**
+/*
  * main - prints each letter from a to z
  *
  * Return: 0, always succesful
-*/
+ */
 
 int main(void)
 {
-	char ch;
-        for (ch = 'a'; ch <= 'z'; ch++)
+	char ch[] = "_putchar\n";
+	int i;
+
+        for (i = 0; i <= 8; i++)
         {
-        	putchar(ch);
+        	_putchar(ch[i]);
         }
-        putchar('\n');
+
         return (0);
 }
 
