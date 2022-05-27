@@ -1,8 +1,8 @@
 
 /**
- * main - check the code.
+ * _isupper - checks for uppercase character
  *
- * Return: Always 0.
+ * Return: returns 1 if uppercase, 0 otherwise
  */
 
 int _isupper(int c)
