@@ -1,6 +1,7 @@
 
 /**
  * _isdigit - checks for a digit
+ * @c: int to be checked
  *
  * Return: returns 1 if it si a digit, 0 otherwise
  */
