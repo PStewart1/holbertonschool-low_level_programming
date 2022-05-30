@@ -14,7 +14,7 @@ int main(void)
     int year;
 
     month = 2;
-    day = 29;
+    day = 28;
     year = 1996;
 
     printf("Date: %02d/%02d/%04d\n", month, day, year);
@@ -33,9 +33,9 @@ int main(void)
  
       print_remaining_days(month, day, year);
 
-	month = 2;
-     day = 28;
-     year = 1900;
+	month = 3;
+     day = 1;
+     year = 2024;
 
      printf("Date: %02d/%02d/%04d\n", month, day, year);
 
@@ -43,6 +43,15 @@ int main(void)
 
      print_remaining_days(month, day, year);
 
+	month = 3;
+      day = 1;
+      year = 2022;
+ 
+      printf("Date: %02d/%02d/%04d\n", month, day, year);
+ 
+      day = convert_day(month, day);
+ 
+      print_remaining_days(month, day, year);
 
     return (0);
 }
