@@ -12,6 +12,10 @@ int main(void)
     char *str;
 
     str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
+    print_rev(str);
+
+/*	int i = str{'\0'}; 
+	printf("%d \n", i);
+*/
     return (0);
 }
