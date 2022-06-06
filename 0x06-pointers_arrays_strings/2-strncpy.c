@@ -4,7 +4,7 @@
  * _strncpy - copies 1 string onto another.
  *@dest: string to be copied over
  *@src: string to be copied
- *@x: max number of bytes to use from src
+ *@n: max number of bytes to use from src
  *
  * Return: copied string.
  */
