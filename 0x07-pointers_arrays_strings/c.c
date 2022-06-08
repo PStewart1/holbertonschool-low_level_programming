@@ -8,35 +8,23 @@
  */
 int main(void)
 {
-  /* char *s = "hello, world";
+    char *s = "hello, world";
     char *f = "world";
     char *t;
 
-    t = _strpbrk(s, f);
-    printf("%s\n", t);*/
+    t = _strstr(s, f);
+    printf("%s\n", t);
 
-    char *s = "hello";
-    char *f;
-	char *d = "";
+	/*char *s = "First, solve the problem. Then, write the code.";
+	char *f;
 
-    f = _strchr(s, 'l');
+	f = _strchr(s, ',');
+	printf("%s\n", (f == NULL ? "nil" : f));
 
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-	
-	f = _strchr(s, 'p');
-	
-	
-	printf("%s\n", f);
-	
-	
-	f = _strchr(d, 'l');
-        if (f != NULL)
-	{
-	printf("%s\n", f);
-	}
-    
+	f = _strchr(s, '\0');
+	printf("%s\n", (f == NULL ? "nil" : f));
+
+	f = _strchr(s, 'a');
+	printf("%s\n", (f == NULL ? "nil" : f));  */
 	return (0);
 }
