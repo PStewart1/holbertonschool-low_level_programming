@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _sqrt - guesses sqrt with extra parameter
@@ -13,6 +14,7 @@ int _sqrt(int k, int n)
 	int nk = (k + n / k) / 2;
 	long lk = k;
 
+	printf("%d\n", k);
 	if (k * k == n)
 		return (k);
 	else if ((lk * lk < n) && ((lk + 1) * (lk + 1) > n))
