@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - locates the first occurence of c within s
@@ -8,12 +9,15 @@
  * Return: pointer s
  */
 
-char *_strchr(char *s, char c)
+int  main (void)
 {
+	char *s = "";
+	char c = 'p';
 	int i, n =0;
 
 	if (s[0] == '\0')
 	{
+		printf("%s is null \n", s);
 		return ('\0');
 	}
 
@@ -24,9 +28,11 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return (s + i);
+			printf("%s is not null\n",s + i);
 		}
 	}
-	return ('\0');
-}
 
+  	printf("%s finished\n", s);		
+
+	return (0);
+}

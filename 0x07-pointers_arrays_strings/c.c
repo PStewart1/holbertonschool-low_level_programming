@@ -17,6 +17,7 @@ int main(void)
 
     char *s = "hello";
     char *f;
+	char *d = "";
 
     f = _strchr(s, 'l');
 
@@ -24,5 +25,13 @@ int main(void)
     {
         printf("%s\n", f);
     }
+	
+	f = _strchr(s, 'p');
+	printf("%s\n", f);
+
+	
+	f = _strchr(d, 'l');
+        printf("%s\n", f);
+
     return (0);
 }
