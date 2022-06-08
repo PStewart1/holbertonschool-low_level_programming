@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 	while (s[n] != '\0')
 		n++;
 
-	for (; i < (n - 1); i++)
+	for (; i < n; i++)
 	{
 		if (s[i] == c)
 		{
