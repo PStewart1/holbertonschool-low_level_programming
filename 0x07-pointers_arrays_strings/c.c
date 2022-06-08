@@ -8,14 +8,14 @@
  */
 int main(void)
 {
-   /* char *s = "hello, world";
+   char *s = "hello, world";
     char *f = "world";
     char *t;
 
     t = _strpbrk(s, f);
-    printf("%s\n", t);*/
+    printf("%s\n", t);
 
-    char *s = "hello";
+   /* char *s = "hello";
     char *f;
 	char *d = "";
 
@@ -36,7 +36,7 @@ int main(void)
         if (f != NULL)
 	{
 	printf("%s\n", f);
-	}
+	}*/
     
 	return (0);
 }
