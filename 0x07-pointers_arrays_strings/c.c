@@ -27,11 +27,16 @@ int main(void)
     }
 	
 	f = _strchr(s, 'p');
+	if (f != NULL)
+	{
 	printf("%s\n", f);
-
+	}
 	
 	f = _strchr(d, 'l');
-        printf("%s\n", f);
-
-    return (0);
+        if (f != NULL)
+	{
+	printf("%s\n", f);
+	}
+    
+	return (0);
 }

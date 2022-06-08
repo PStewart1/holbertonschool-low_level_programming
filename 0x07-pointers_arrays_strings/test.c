@@ -11,11 +11,11 @@
 
 int  main (void)
 {
-	char *s = "";
-	char c = 'p';
+	char *s = "hello";
+	char c = 'o';
 	int i, n =0;
 
-	if (s[0] == '\0')
+	if (s[0] == '\0' || c == '\0')
 	{
 		printf("%s is null \n", s);
 		return ('\0');
@@ -24,11 +24,12 @@ int  main (void)
 	while (s[n] != '\0')
 		n++;
 
-	for (i = 0; i < (n - 1); i++)
+	for (i = 0; i < n ; i++)
 	{
 		if (s[i] == c)
 		{
 			printf("%s is not null\n",s + i);
+			return 0;
 		}
 	}
 
