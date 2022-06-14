@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Main program, prints ell its arguments
+ * main - Main program, prints sum of its arguments
  * @argc: number of arguments
  * @argv: array of argument strings
  *
@@ -26,10 +26,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-	}
-
-	for (i = 1; i < argc; i++)
-	{
 		sum += atoi(argv[i]);
 	}
 
