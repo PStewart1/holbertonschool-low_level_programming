@@ -11,25 +11,39 @@
 
 char *str_concat(char *dest, char *src)
 {
-	int i, j = 0, k = 0;
+	int i = 0, j = 0, k = 0;
 	char *str;
 
-	while (dest[j] != '\0')
-		j++;
+	if (dest != NULL)
+	{
+		while (dest[j] != '\0')
+			j++;
+	}
+	else
+		j = 1;
 
-	while (src[k] != '\0')
-		k++;
+	if (src != NULL)
+	{
+		while (src[k] != '\0')
+			k++;
+	}
+	else
+		k = 1;
 
-	str = malloc(j + k + 2);
+	str = malloc(j + k + 1);
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0 ; dest[i] != '\0' ; i++)
-		str[i] = dest[i];
-
-	for (j = 0; src[j] != '\0' ; i++, j++)
-		str[i] = src[j];
-
+	if (dest != NULL)
+	{
+		for (; i < j; i++)
+			str[i] = dest[i];
+	}
+	if (src != NULL)
+	{
+		for (j = 0; j < k; i++, j++)
+			str[i] = src[j];
+	}
 	str[i] = '\0';
 	return (str);
 }
