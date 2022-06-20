@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * argstostr - concats all arguments of program
+ * @ac: number of arguments
+ * @av: array of arguments
+ *
+ * Return: pointer to str
+ */
 
 char *argstostr(int ac, char **av)
 {
