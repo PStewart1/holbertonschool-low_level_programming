@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * create_array - Creates an array of chars
- * @size: the size of the array
- * @c: the initial char
+ * free_grid - frees an array of int pointers
+ * @grid: array to be freed
+ * @height: height of array
  *
- * Return: pointer to the array, or NULL if failed..
+ * Return: void
  */
 
 void free_grid(int **grid, int height)
@@ -17,9 +17,9 @@ void free_grid(int **grid, int height)
 	for (i = 0; i < height; i++)
 	{
 		ptr = grid[i];
-		free (ptr);
+		free(ptr);
 	}
 
-	free (grid);
+	free(grid);
 
 }
