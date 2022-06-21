@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /**
- * malloc_array - Creates an array of chars
- * @size: the size of the array
- * @c: the initial char
+ * malloc_checked - allocates memory on heap
+ * @b: size of memory
  *
- * Return: pointer to the array, or NULL if failed..
+ * Return: pointer to the memory
  */
 
 void *malloc_checked(unsigned int b)
 {
-	void *p = malloc(b);
+	void *p;
+
+	p = malloc(b);
 	if (p == NULL)
-		exit (98);
+		exit(98);
 
 	return (p);
 }
