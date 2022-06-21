@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * _calloc - returns an  array, initialized to 0
- * @nmemb: number of elements
- * @size: size of elements
+ * array_range - returns an  array of ints, form min to max
+ * @min: first number of array
+ * @max: last number of array
  * Return: pointer to the array
  */
 
