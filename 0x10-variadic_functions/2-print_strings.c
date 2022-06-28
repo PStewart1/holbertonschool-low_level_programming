@@ -5,8 +5,8 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - variadic function  prints all int arguments
- * @separator: separator between numbers tobe printed
+ * print_strings - variadic function prints all string arguments
+ * @separator: separator between strings to be printed
  * @n: number of arguments
  *
  * Return: void
