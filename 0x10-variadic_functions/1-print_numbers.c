@@ -5,10 +5,11 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - variadic function that returns sum of all arguments
+ * print_numbers - variadic function  prints all int arguments
+ * @separator: separator between numbers tobe printed
  * @n: number of arguments
  *
- * Return: sum of arguments
+ * Return: void
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
