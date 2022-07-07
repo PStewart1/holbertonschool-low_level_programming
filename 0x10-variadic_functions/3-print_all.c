@@ -71,7 +71,7 @@ void print_all(const char *format, ...)
 	};
 
 	if (format == NULL)
-		return;
+		format = "";
 	va_start(args, format);
 	while (format[i])
 	{
