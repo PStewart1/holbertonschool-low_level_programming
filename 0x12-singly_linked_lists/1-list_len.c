@@ -4,7 +4,7 @@
  * list_len - prints all the elements of a list_t list.
  * @h: list to be printed
  *
- * Returns: the number of nodes
+ * Return: the number of nodes
  */
 
 size_t list_len(const list_t *h)

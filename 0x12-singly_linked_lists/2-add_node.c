@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a list_t list.
- * @head: list to be printed
- * @str: 
- * Returns: the address of the new element, or NULL if it failed
+ * add_node - adds a new node at the beginning of a list_t list.
+ * @head: list to be added to
+ * @str: content of new node
+ * Return: the address of the new element, or NULL if it failed
  */
 
 list_t *add_node(list_t **head, const char *str)
