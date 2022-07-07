@@ -1,5 +1,9 @@
 #include "variadic_functions.h"
 
+/**
+ * print_char - prints a char
+ * @c: va_list with a char
+ */
 void print_char(va_list c)
 {
 	if (!c)
@@ -7,6 +11,10 @@ void print_char(va_list c)
 	putchar((char)va_arg(c, int));
 }
 
+/**
+  * print_str - prints a string
+  * @s: va_list with a string
+  */
 void print_str(va_list s)
 {
 	char *str = va_arg(s, char *);
@@ -16,6 +24,10 @@ void print_str(va_list s)
 	printf("%s", str);
 }
 
+/**
+  * print_int - prints an int
+  * @i: va_list with an int
+  */
 void print_int(va_list i)
 {
 	int num = (int)va_arg(i, int);
@@ -23,6 +35,10 @@ void print_int(va_list i)
 	printf("%d", num);
 }
 
+/**
+  * print_float - prints a float
+  * @i: va_list with a float
+  */
 void print_float(va_list i)
 {
 	float num = (float)va_arg(i, double);
@@ -50,8 +66,8 @@ void print_all(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	if(format == NULL)
-        	return;
+	if (format == NULL)
+		return;
 	va_start(args, format);
 	while (format[i])
 	{
@@ -63,17 +79,18 @@ void print_all(const char *format, ...)
 				fp = (p[j].f);
 				fp(args);
 				printf(", ");
-				switch(format[i + 1]) {
-					case '\0':
-						break;
-					default:
-						printf(", ");
-						break;
+				switch (format[i + 1])
+				{
+				case '\0':
+					break;
+				default:
+					printf(", ");
+					break;
 				}
 				break;
 			}
 			j++;
-		}   
+		}
 		i++;
 	}
 	printf("\n");
