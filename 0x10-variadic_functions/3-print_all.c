@@ -2,13 +2,18 @@
 
 /**
  * print_char - prints a char
- * @c: va_list with a char
+ * @ch: va_list with a char
  */
-void print_char(va_list c)
+void print_char(va_list ch)
 {
-	if (!c)
+	char c = (char)va_arg(ch, int);
+
+	switch (c)
+	{
+	case '\0':
 		return;
-	putchar((char)va_arg(c, int));
+	}
+	putchar(c);
 }
 
 /**
@@ -19,8 +24,7 @@ void print_str(va_list s)
 {
 	char *str = va_arg(s, char *);
 
-	if (str == NULL)
-		str = "(nil)";
+	(str == NULL) && (str = "(nil)");
 	printf("%s", str);
 }
 
