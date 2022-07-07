@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, result;
+	int a, b;
+	int (*result)(int, int);
 	char *s;
 
 	if (argc != 4)
@@ -33,8 +34,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	s = argv[2];
-	result = get_op_func(s, a, b);
-	printf("%d\n", result);
+	result = get_op_func(s);
+	printf("%d\n", result(a,b));
 
 	return (0);
 }
