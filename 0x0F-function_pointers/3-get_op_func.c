@@ -4,8 +4,7 @@
 /**
  * get_op_func - selects the correct function based on operator given
  * @s: operator to be selected
- * @a: int to operated on
- * @b: int to operated on
+ *
  * Return: pointer to function selected
  */
 
