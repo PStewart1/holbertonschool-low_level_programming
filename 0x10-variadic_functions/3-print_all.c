@@ -82,7 +82,6 @@ void print_all(const char *format, ...)
 			{
 				fp = (p[j].f);
 				fp(args);
-				printf(", ");
 				switch (format[i + 1])
 				{
 				case '\0':
