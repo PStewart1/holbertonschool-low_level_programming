@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * listint_len - returns the number of elements of a listint_t list.
- * @h: list to be counted
+ * sum_listint - returns the sum of elements of a listint_t list.
+ * @head: list to be summed up
  *
- * Return: the number of nodes
+ * Return: the sum
  */
 
 int sum_listint(listint_t *head)
