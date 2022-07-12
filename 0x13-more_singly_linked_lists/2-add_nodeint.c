@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a list_t list.
+ * add_nodeint - adds a new node at the beginning of list.
  * @head: list to be added to
- * @str: content of new node
+ * @n: content of new node
  * Return: the address of the new element, or NULL if it failed
  */
 
