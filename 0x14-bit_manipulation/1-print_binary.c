@@ -8,7 +8,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int i = 31, num, startprinting = 0;
+	int i = 63, startprinting = 0;
+	unsigned long int num;
 
 	if (n == 0)
 	{
