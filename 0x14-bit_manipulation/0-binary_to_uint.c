@@ -8,8 +8,8 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, decimal = 0, base = 1, remainder;
-	long binary;
+	unsigned int decimal = 0, base = 1;
+	int i = 0;
 
 	if (b == NULL)
 		return (0);
@@ -19,13 +19,11 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		i++;
 	}
-	binary = atoi(b);
-	while (binary > 0)
+	i--;
+	for (; i >= 0; i--)
 	{
-		remainder = binary % 10;
-		decimal += remainder * base;
-		binary = binary / 10;
-		base = base * 2;
+		decimal += (b[i] - '0') * base;
+		base = base << 1;
 	}
 
 	return (decimal);
