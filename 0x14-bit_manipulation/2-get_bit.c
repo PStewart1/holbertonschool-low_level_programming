@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_binary - prints out an int in binary
- * @n:int to be converted
- * Return: void
+ * get_bit - prints out the bit at a given index
+ * @n: int to be converted
+ * @index: index of bit to be printed
+ * Return: bit at index
  */
 
 int get_bit(unsigned long int n, unsigned int index)
