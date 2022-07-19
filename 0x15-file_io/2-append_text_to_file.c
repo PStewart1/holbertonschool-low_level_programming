@@ -1,25 +1,27 @@
 #include "main.h"
 
 /**
- * create_file - creates a new file and writes a given string to it
- * @filename: name of file to be read
- * @text: string to be written to file
+ * append_text_to_file - appends text to the enf of a file
+ * @filename: name of file
+ * @text: text to be appended to file
  * Return: 1 on success, -1 on failure
  */
 
-int create_file(const char *filename, char *text)
+int append_text_to_file(const char *filename, char *text)
 {
 	int file;
 	ssize_t printed;
 
 	if (filename == NULL)
 		return (-1);
-	file = creat(filename, 0600);
+	file = open(filename, O_APPEND | O_WRONLY);
 	if (file == -1)
 		return (-1);
 	if (text == NULL)
-		text = "";
-
+	{
+		close(file);
+		return (1);
+	}
 	printed = write(file, text, strlen(text));
 	if (printed == -1)
 	{
