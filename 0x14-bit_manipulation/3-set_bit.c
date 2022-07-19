@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * get_bit - prints out the bit at a given index
- * @n: int to be converted
- * @index: index of bit to be printed
- * Return: bit at index
+ * set_bit - sets the bit at a given index to 1
+ * @n: int to be shifted
+ * @index: index of bit to be set
+ * Return: 1 on success, -1 on failure
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	
 	if (index > 63)
 		return (-1);
 
