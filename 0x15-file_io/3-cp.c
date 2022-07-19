@@ -26,7 +26,8 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	fd2 = creat(file_to, 0664);
+	umask(0002);
+	fd2 = open(file_to, O_CREAT | O_RDWR | O_TRUNC, 0664);
 	printed = write(fd2, text, rdcount);
 	if (printed < rdcount || fd2 == -1)
 	{
