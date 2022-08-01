@@ -1,27 +1,30 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * main - check the code for Holberton School students.
  *
  * Return: Always EXIT_SUCCESS.
  */
 int main(void)
 {
     dlistint_t *head;
-    int sum;
+    dlistint_t *new;
+    dlistint_t hello = {8, NULL, NULL};
+    size_t n;
 
-    head = NULL;
-    add_dnodeint_end(&head, 0);
-    add_dnodeint_end(&head, 1);
-    add_dnodeint_end(&head, 2);
-    add_dnodeint_end(&head, 3);
-    add_dnodeint_end(&head, 4);
-    add_dnodeint_end(&head, 98);
-    add_dnodeint_end(&head, 402);
-    add_dnodeint_end(&head, 1024);
-    sum = sum_dlistint(head);
-    printf("sum = %d\n", sum);
-    free_dlistint(head);
-    head = NULL;
+    head = &hello;
+    new = malloc(sizeof(dlistint_t));
+    if (new == NULL)
+    {
+        dprintf(2, "Error: Can't malloc\n");
+        return (EXIT_FAILURE);
+    }
+    new->n = 9;
+    head->prev = new;
+    new->next = head;
+    new->prev = NULL;
+    n = print_dlistint_backward(head);
+    printf("-> %lu elements\n", n);
+    free(new);
     return (EXIT_SUCCESS);
 }
