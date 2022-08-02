@@ -24,6 +24,7 @@ int main(void)
     new->next = head;
     new->prev = NULL;
     head = new;
+	head = NULL;
     n = print_dlistint_backward(head);
     printf("-> %lu elements\n", n);
     free(new);
