@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || strlen(key) <= 1 || !node)
 		return (0);
-	node->key = (char *)key;
+	node->key = strdup(key);
 	node->value = strdup(value);
 	if (!node->value)
 		return (0);
@@ -29,6 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(head->key, key) == 0)
 		{
 			head->value = (char *)value;
+			free(node->key);
 			free(node->value);
 			free(node);
 			return (1);
