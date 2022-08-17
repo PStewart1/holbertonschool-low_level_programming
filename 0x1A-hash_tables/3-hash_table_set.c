@@ -26,9 +26,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (head)
 	{
-		if (strcom(head->key, key) == 0)
+		if (strcmp(head->key, key) == 0)
 		{
-			head->value = value;
+			head->value = (char *)value;
 			free(node->value);
 			free(node);
 			return (1);
