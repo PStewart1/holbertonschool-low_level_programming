@@ -10,7 +10,7 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *head;
+	hash_node_t *head, *scanner;
 	hash_node_t *node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	unsigned long int index;
 
@@ -26,16 +26,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (head)
 	{
-		if (strcmp(head->key, key) == 0)
+		scanner = head;
+		while (scanner)
 		{
-			head->value = strdup(value);
-			free(node->key);
-			free(node->value);
-			free(node);
-			return (1);
+			if (strcmp(scanner->key, key) == 0)
+			{
+				strcpy(scanner->value, value);
+				free(node->key);
+				free(node->value);
+				free(node);
+				return (1);
+			}
+			scanner = scanner->next;
 		}
-		else
-			node->next = head;
+		node->next = head;
 	}
 	ht->array[index] = node;
 	return (1);
