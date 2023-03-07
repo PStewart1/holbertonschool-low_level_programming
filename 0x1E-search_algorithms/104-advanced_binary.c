@@ -28,7 +28,7 @@ int recursive_search(int *pointer, int L, int R, int value)
 	if (pointer[M] < value)
 		result = recursive_search(pointer, M + 1, R, value); /** L = M + 1; */
 	else if (pointer[M] > value)
-		result = recursive_search(pointer, L, M - 1, value); /**R = M - 1;*/
+		result = recursive_search(pointer, L, M, value); /**R = M - 1;*/
 	else if (pointer[M] == value)
 	{
 		if (pointer[M - 1] < value || M == 0)
